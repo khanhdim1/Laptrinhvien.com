@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trung Khánh - Lập Trình Viên</title>
+<style>
+  :root{
+    --accent1:#ff0050;
+    --accent2:#00f2ea;
+    --bg:#0d0d0d;
+    --card:#0f1720;
+    --muted:rgba(255,255,255,0.7);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #051020 0%, #08121a 60%);
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  header{
+    padding:48px 18px 36px;
+    text-align:center;
+    background: linear-gradient(90deg,var(--accent1),var(--accent2));
+    clip-path: polygon(0 0,100% 0,100% 78%,0 100%);
+  }
+  .avatar-wrap{
+    width:140px;height:140px;margin:0 auto;border-radius:50%;
+    padding:6px;background:rgba(255,255,255,0.12);display:grid;place-items:center;
+    box-shadow:0 8px 30px rgba(0,0,0,0.4); transform: translateY(12px);
+  }
+  .avatar{
+    width:124px;height:124px;border-radius:50%;object-fit:cover;border:3px solid #fff;
+    display:block; transition: transform .35s ease, filter .35s ease;
+  }
+  .avatar:hover{ transform: scale(1.03); filter:brightness(1.02) saturate(1.05); }
+
+  header h1{ margin:14px 0 6px; font-size:26px; letter-spacing:0.4px; }
+  header p.sub{ margin:0;color:rgba(255,255,255,0.95); font-size:15px; opacity:0.95 }
+
+  main{ max-width:980px; margin:-36px auto 80px; padding:18px; }
+
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.04);
+    border-radius:14px; padding:22px; margin-bottom:18px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.5);
+  }
+
+  h2{
+    margin:0 0 12px; font-size:18px; display:flex; align-items:center; gap:10px;
+    font-weight:700;
+  }
+  .lead{ color:var(--muted); font-size:15px; line-height:1.6; }
+
+  .skills{ display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+  .skill{
+    background:transparent; border:1px solid rgba(255,255,255,0.06);
+    padding:8px 12px; border-radius:999px; font-size:14px; color:var(--muted);
+  }
+
+  .projects{ display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:10px; }
+  .project{
+    padding:14px; border-radius:10px; background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.18));
+    border:1px solid rgba(255,255,255,0.03);
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .project:hover{ transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.6); }
+
+  .meta-row{ display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-top:12px; color:var(--muted); font-size:14px; }
+
+  .contact a{
+    display:inline-block; margin-right:8px; margin-top:8px;
+    padding:10px 14px; border-radius:8px; text-decoration:none; color:#061018; font-weight:700;
+    background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  }
+  .contact a:hover{ opacity:0.95; transform:translateY(-2px); }
+
+  footer{ text-align:center; color:rgba(255,255,255,0.45); margin-top:18px; font-size:13px; }
+
+  /* responsive */
+  @media (max-width:640px){
+    header{ padding:36px 12px 24px }
+    .avatar-wrap{ width:112px;height:112px;padding:5px }
+    .avatar{ width:102px;height:102px }
+    main{ padding:12px; margin-top:-24px }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar-wrap" aria-hidden="true">
+    <!-- Ảnh đại diện của bạn (đã đổi) -->
+    <img class="avatar" src="https://i.ibb.co/MD65SG3k/IMG-2169-Original.png" alt="Ảnh đại diện Trung Khánh">
+  </div>
+
+  <h1>Trung Khánh</h1>
+  <p class="sub">Lập trình viên • Web & Mobile • IoT • AI</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>👋 Giới thiệu</h2>
+    <p class="lead">
+      Xin chào — mình là <strong>Trung Khánh</strong>, một lập trình viên đam mê xây dựng sản phẩm từ idea đến production.
+      Mình chuyên phát triển web, ứng dụng di động, và các project IoT/AI. Luôn tìm cách tối ưu trải nghiệm người dùng và viết code dễ bảo trì.
+    </p>
+    <div class="meta-row">
+      <div>📍 Việt Nam</div>
+      <div>💼 Kinh nghiệm: 3+ năm</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🚀 Kỹ năng</h2>
+    <div class="skills">
+      <div class="skill">HTML / CSS / JavaScript</div>
+      <div class="skill">React / Vue</div>
+      <div class="skill">Python</div>
+      <div class="skill">Flask / Django</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MySQL / MongoDB</div>
+      <div class="skill">Kivy (App Mobile)</div>
+      <div class="skill">ESP32 / ESP8266 (IoT)</div>
+      <div class="skill">Machine Learning / AI</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📂 Dự án tiêu biểu</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>🎡 Vòng quay may mắn</h3>
+        <p class="lead">Minigame web với hiệu ứng animation mượt, hệ thống nạp ảo, lưu lịch sử và bảng xếp hạng.</p>
+        <div class="meta-row"><div>Tech: HTML/CSS/JS</div><div>Link: —</div></div>
+      </div>
+
+      <div class="project">
+        <h3>🎰 Nổ hũ - Slot Game</h3>
+        <p class="lead">Game slot có AI gợi ý cược, hệ thống xu, minigame kèm hiệu ứng âm thanh và lưu progress.</p>
+        <div class="meta-row"><div>Tech: Python / Kivy</div><div>Link: —</div></div>
+      </div>
+
+      <div class="project">
+        <h3>📱 Ứng dụng Mobile (Kivy)</h3>
+        <p class="lead">Bản demo app mobile chứa minigame, giao diện tối/sáng, đóng gói Android/iOS.</p>
+        <div class="meta-row"><div>Tech: Kivy</div><div>Link: —</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card contact">
+    <h2>📩 Liên hệ</h2>
+    <p class="lead">Bạn muốn hợp tác hoặc cần mình hỗ trợ dự án? Gửi email hoặc kết nối trên GitHub / Facebook.</p>
+    <div style="margin-top:12px">
+      <a href="mailto:trungkhanh@example.com">Email</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Trung Khánh — Lập trình viên
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
